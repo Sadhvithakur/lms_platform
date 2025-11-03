@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+* {
+  font-family: 'Outfit';
+}
+
+/* Custom font sizes using Tailwind layers */
+@layer utilities {
+  .text-course-details-heading-small {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .text-course-details-heading-large {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .text-home-heading-small {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .text-home-heading-large {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .grid-template-auto {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  /* Course Details custom utilities */
+  .max-w-course-card {
+    max-width: 424px;
+    /* matches design */
+    width: 100%;
+  }
+
+  .shadow-custom-card {
+    box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Course card hero and overlay styles */
+  .course-card-hero {
+    position: relative;
+    height: 220px;
+    /* hero height similar to screenshot */
+    width: 100%;
+    overflow: hidden;
+    background-color: #0b2236;
+  }
+
+  .course-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.6);
+  }
+
+  .course-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(3, 37, 65, 0.35) 0%, rgba(3, 37, 65, 0.6) 100%);
+  }
+
+  .course-card-badge {
+    background: #ffd54a;
+    color: #041226;
+    font-weight: 800;
+    padding: 6px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    font-size: 13px;
+  }
+
+  .course-card-title {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .course-card-subtitle {
+    background: #ffd54a;
+    color: #041226;
+    display: inline-block;
+    padding: 6px 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  .course-card-bottom {
+    background: #ffffff;
+    padding: 16px;
+  }
+
+  .course-card-stats img {
+    width: 16px;
+    height: 16px
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.rich-text {
+  font-size: 15px;
+  color: #7A7B7D;
+}
+
+.rich-text p {
+  margin-bottom: 16px;
+}
+
+.rich-text h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #252525;
+  margin: 32px 0;
+}
+
+.rich-text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #252525;
+  margin: 24px 0;
+}
+
+.rich-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin: 20px 0;
+}
+
+.rich-text h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #444444;
+  margin: 16px 0;
+}
+
+.rich-text h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555555;
+  margin: 12px 0;
+}
+
+.rich-text h6 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #666666;
+  margin: 8px 0;
+}
+
+.rich-text strong {
+  font-weight: 700;
+}
+
+.rich-text ol {
+  margin-left: 30px;
+  list-style-type: decimal;
+}
+
+.rich-text ul {
+  margin-left: 30px;
+  list-style-type: disc;
+}
+
+.rich-text li {
+  margin-bottom: 8px;
+}
